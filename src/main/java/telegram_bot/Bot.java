@@ -9,7 +9,7 @@ public class Bot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update){
         String msg = update.getMessage().getText().toLowerCase();
-//        sendMsg(update.getMessage().getChatId().toString(),new LogicBot().sayInReturn(msg));
+        sendMsg(update.getMessage().getChatId().toString(),new LogicBot().sayInReturn(msg));
     }
 
     public synchronized void sendMsg(String chatId, String s) {
